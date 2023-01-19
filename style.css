@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fdc830; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #f37335,
+        #fdc830
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #f37335,
+        #fdc830
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    
+    width: 90vw;
+}
+
+.panel {
+    color: #fff;
+    height: 80vh;
+    border-radius: 10px;
+    cursor: pointer;
+
+    flex: 0.5;
+
+    margin: 0.5em;
+
+    position: relative;
+
+    border: 2px solid rgba(255, 255, 255, 0.689);
+
+    transition: flex 0.7s ease-in-out;
+}
+
+
+.panel:nth-child(1) {
+    background: url("BackGround-1.jpg") center top/cover no-repeat #1b1b1b;
+}
+
+.panel:nth-child(2) {
+    background: url("BackGround-2.jpg") center top/cover no-repeat #1b1b1b;
+}
+
+.panel:nth-child(3) {
+    background: url("BackGround-3.jpg") center top/cover no-repeat #1b1b1b;
+}
+
+.panel:nth-child(4) {
+    background: url("BackGround-4.jpg") center top/cover no-repeat #1b1b1b;
+}
+
+h3 {
+    margin: 0;
+ 
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    font-size: 24px;
+ 
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 4;
+}
+
+.panel.active h3 {
+    opacity: 1;
+
+    transition: opacity 0.3s ease-in 0.4s;
+}
